@@ -7,6 +7,7 @@ def add1(x):
 
 def test_add1():
     assert 3 != 4
+    assert 5 == 5
    
 @pytest.mark.parametrize("test_input, expected", [("3+5", 8), ("2+4", 6), ("6*9", 54)])
 def test_add_expression_with_params(test_input, expected):
