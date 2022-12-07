@@ -23,8 +23,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Launch tests & generate report
-        run: pytest
-
+        run: pytest --cov=./ --cov-report=xml tests
+        timeout-minutes: 20
+        
       - name: Coverage comment
         id: coverage_comment
         uses: py-cov-action/python-coverage-comment-action@v3
